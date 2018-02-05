@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue test</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+</head>
+<body>
+<div id="vue-app">
+    <form>
+        <input type="text" v-model="name"/>{{name}}<br/>
+        <input type="text" v-model="last"/>{{last}}<br/>
+        <input type="text" v-model="index"/>{{index}}<br/>
+        <select v-model="grade">
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+        </select>
+        {{grade}}
+        <button type="button" v-on:click="add()">Add To Table</button>
+        <button type="button" v-on:click="saveFile()">saveFile</button>
+    </form>
+    <table border="1">
+        <thead><td>Name</td><td>Last Name</td><td>Index</td><td>Grade</td></thead>
+        <tbody>
+        <tr v-for="x in arr">
+            <td>{{x.first}}</td>
+            <td>{{x.lastn}}</td>
+            <td>{{x.index}}</td>
+            <td>{{x.grade}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="test.js"></script>
+</body>
+</html>

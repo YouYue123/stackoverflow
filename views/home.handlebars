@@ -1,0 +1,12 @@
+{{#each family as |family|}}                  
+    <h1>{{family.surName}}</h1>           
+
+    {{#each family.members as |member|}}                
+       <h1>{{member.firstName}}</h1>       
+    {{else}}                        
+       <h1>Not working</h1>         
+    {{/each}}                        
+
+  {{else}}                          
+      <h1>No family</h1>             
+{{/each}}  
